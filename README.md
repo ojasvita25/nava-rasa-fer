@@ -50,6 +50,8 @@ pip install -r requirements.txt
 # Run the Flask app
 python -m flask --app ./app.py run
 
+```
+
 ## 💡 How It Works
 
 - Browse the **9 Rasa tabs**, each with its own visuals and audio.
