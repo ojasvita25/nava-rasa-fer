@@ -1,4 +1,6 @@
+facenet_pytorch
 Flask
+flask-cors
 Gunicorn
 numpy
 onnx
