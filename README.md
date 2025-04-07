@@ -1,21 +1,21 @@
 # Nava Rasa 🎭
 
-**Nava Rasa** is an interactive web experience built with Flask that explores the **9 classical emotions (Rasas)** from Indian aesthetics. Each Rasa is brought to life through visuals and audio, offering users an immersive way to engage with emotions.
+**Nava Rasa** is an interactive web experience built with Flask that explores the **9 classical emotions (Rasas)** as mentioned in Indian scriptures(Natyashastra) for performing arts. Each Rasa is brought to life through visuals and audio, offering users an immersive way to engage with emotions.
 
 ## 🌟 Features
 
 - 🌈 Tabs for each of the **9 Rasas**:
   - Shringar (Love)
-  - Hasya (Laughter)
-  - Karuna (Compassion)
+  - Hasya (Laughter/Satire)
+  - Karuna (Sadness/Pathos)
   - Raudra (Anger)
   - Veera (Courage)
   - Bhayanaka (Fear)
   - Vibhasta (Disgust)
-  - Adbutta (Wonder)
-  - Shanta (Peace)
+  - Adbutta (Wonderment)
+  - Shanta (Serenity)
 
-- 🎨 Custom image and 🎵 audio for each Rasa
+- 🎨 Custom image and audio for each Rasa
 - 🧠 Designed for emotional exploration and learning
 - ⚡️ Lightweight Flask app for easy deployment
 
