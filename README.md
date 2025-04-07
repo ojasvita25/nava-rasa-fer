@@ -19,11 +19,11 @@
 - 🧠 Designed for emotional exploration and learning
 - ⚡️ Lightweight Flask app for easy deployment
 
+This project uses the **FER (Facial Expression Recognition)** model from the open-source [EmotiEffLib](https://github.com/sb-ai-lab/EmotiEffLib) repository by SB-AI-Lab.
+
 ## 📸 Demo
 
 ![Nava Rasa Demo](demo.gif)
-
-> Replace `path/to/your/demo.gif` with the actual path or URL to the GIF (can be local or hosted online like on Imgur or your repo)
 
 ## 🚀 Getting Started
 
@@ -42,10 +42,24 @@ cd nava-rasa
 # Set up virtual environment
 pip install virtualenv
 virtualenv fer
-source fer/bin/activate   # On Windows use `fer\Scripts\activate`
+source fer/bin/activate
 
 # Install dependencies
 pip install -r requirements.txt
 
 # Run the Flask app
 python -m flask --app ./app.py run
+
+## 💡 How It Works
+
+- Browse the **9 Rasa tabs**, each with its own visuals and audio.
+- Click **"Interact"** to enable real-time facial emotion detection via webcam.
+- The model maps your expression to the closest matching **Rasa** and updates the content.
+- **7 out of 9 Rasas** can be detected automatically through interaction; the rest are for manual exploration.
+- Click **"Pause"** to stop interaction and explore freely.
+
+### 🔗 Resources
+
+- GitHub: [https://github.com/sb-ai-lab/EmotiEffLib](https://github.com/sb-ai-lab/EmotiEffLib)
+
+> Credit to SB-AI-Lab for open-sourcing this powerful model!
