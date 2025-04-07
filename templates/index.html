@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='index.css') }}">
+    <title>Nava Rasa</title>
+</head>
+<body>
+    <h1>Nava Rasa <button id="info-btn">i
+    </button></h1>
+
+    <!-- Buttons to change the background -->
+    <div class="button-container">
+        {% for name in background_images.keys() %}
+            <button id="rasa-{{ name }}" class="rasa-button" onclick="updateBackgroundAndAudio('{{ name }}')">{{ name }}</button>
+        {% endfor %}
+    </div>
+
+    <!-- Information Modal -->
+    <div id="info-modal" >
+        <div class="modal-content">
+            <h2>Nava Rasa</h2>
+            <p>
+                Nava Rasa refers to the nine primary emotions in classical Indian arts and literature, representing different states of mind and feelings.
+            </p>
+            
+            <h3 class="sringara">Sringara (Love) Rasa</h3>
+            <p>
+                Sringara Rasa involves side-eye glances and a look of intense affection suggestive of love or carnal passion.
+            </p>
+    
+            <h3 class="raudra">Raudra (Anger) Rasa</h3>
+            <p>
+                Raudra Rasa consists of lifted brows, widened eyes with dilating pupils, and the gnashing of teeth to indicate wrath.
+            </p>
+    
+            <h3 class="veera">Veera (Courage) Rasa</h3>
+            <p>
+                Veera Rasa is adopted by widening the eyes and assuming a look of dignity, while the head is tossed back in a noble manner.
+            </p>
+    
+            <h3 class="hasya">Hasya (Satire) Rasa</h3>
+            <p>
+                Hasya Rasa is denoted by a supercilious glance beneath lowered lids, the eyebrows being arched, and the head slightly tossed in disdain.
+            </p>
+    
+            <h3 class="karuna">Karuna (Pathos) Rasa</h3>
+            <p>
+                Karuna Rasa consists of glances out of the corner of the eye and a look of tenderness to suggest compassion.
+            </p>
+    
+            <h3 class="vibhasta">Vibhasta (Disgust) Rasa</h3>
+            <p>
+                Vibhasta Rasa makes the player contract his eyes, lower his chin, pout his lips, and curl them in a gesture of contempt.
+            </p>
+    
+            <h3 class="adbuta">Adbuta (Wonderment) Rasa</h3>
+            <p>
+                Adbuta Rasa involves arching of brows and a tremulous smile on the lips, with the whole face expressing pleased amazement.
+            </p>
+    
+            <h3 class="bhayanaka">Bhayanaka (Fear) Rasa</h3>
+            <p>
+                Bhayanaka Rasa is assumed by rolling the eyes from side to side, dilating the nostrils, and sharply jerking the head and neck to suggest fear.
+            </p>
+    
+            <h3 class="shanta">Shanta (Serenity) Rasa</h3>
+            <p>
+                Shanta Rasa is expressed by a peaceful look, with eyes shut or turned heavenwards. The whole attitude is one of calmness.
+            </p>
+
+            <!-- Citation Section -->
+            <footer class="citation">
+                <p><strong>Source:</strong> Indian Dancing Book by Ram Gopal</p>
+            </footer>
+            <button class="close-btn" onclick="closeInfoModal()">Close</button>
+
+        </div>
+    </div>
+    
+    <!-- Interact and Pause Buttons -->
+    <div id="interact-pause-container">
+        <button id="interact-btn" onclick="startWebcam()">Interact</button>
+        <button id="pause-btn" onclick="pauseWebcam()">Pause</button>
+    </div>
+
+<script src="{{ url_for('static', filename='index.js') }}"></script>
+<!-- <script src="{{ url_for('static', filename='face-api.min.js') }}"></script> -->
+<!-- <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script> -->
+<!-- <script src="https://cdn.jsdelivr.net/npm/@mediapipe/face_mesh"></script> -->
+<!-- <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs-vis"></script> -->
+<script src="{{ url_for('static', filename='face-api.js') }}"></script>
+
+</body>
+</html>

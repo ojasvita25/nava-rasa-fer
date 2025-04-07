@@ -1,0 +1,228 @@
+body {
+    font-family: Arial, sans-serif;
+    color: white;
+    text-align: center;
+    background-size: cover;
+    background-image: url('/static/images/test.gif'); /* Default background */
+    background-position: center;
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    justify-content: bottom;
+    align-items: bottom;
+    transition: background 0.5s ease; /* Smooth transition */
+}
+
+h1 {
+    font-size: 2rem;
+    margin-top: 20px;
+    margin-left: 50px;
+    display: inline-block;
+    position: relative; /* Added this to position the 'i' button next to it */
+}
+
+#content {
+    font-size: 1.2rem;
+}
+
+.button-container {
+    margin-top: 10px;
+    margin-left: 100px;
+}
+
+.button-container button {
+    margin: 5px;
+    padding: 12px 24px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    border: none; /* Remove border */
+    background-color: rgba(255, 255, 255, 0.2); /* Very light background */
+    color: white;
+    border-radius: 4px; /* Rounded corners */
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+/* Button hover effect */
+.button-container button:hover {
+    background-color: rgba(255, 255, 255, 0.4); /* Slightly darker on hover */
+    transform: scale(1.1); /* Slight zoom effect */
+}
+
+/* Optional: Focus effect when button is clicked */
+.button-container button:focus {
+    outline: none; /* Remove default focus outline */
+    box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.7); /* Subtle glow effect */
+}
+
+/* Highlight the predicted Rasa button */
+.button-container button.highlighted {
+    background-color: rgba(127, 251, 185, 0.6); /* More prominent highlight */
+    border: 2px solid white;
+    transform: scale(1.15); /* Slight enlargement */
+    /* font-weight: bold; */
+}
+
+/* Information button styles (i button) */
+#info-btn {
+    font-size: 1rem;
+    cursor: pointer;
+    background: none;
+    border: none;
+    color: white;
+    position: absolute;
+    top: 4px;
+    right: -60px; /* This positions it next to the H1 tag */
+    width: 30px; /* Button width */
+    height: 30px; /* Button height */
+    border-radius: 50%; /* Makes the button circular */
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Centers the "i" inside the circle */
+    background-color: rgba(255, 255, 255, 0.3); /* Light background */
+    transition: background-color 0.3s;
+}
+
+/* Hover effect for the info button */
+#info-btn:hover {
+    background-color: rgba(255, 255, 255, 0.5); /* Darker on hover */
+}
+
+/* Modal styles */
+#info-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 30px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    z-index: 9999;
+    overflow-y: auto;
+}
+
+#info-modal .modal-content {
+   /* Modal content box */
+        background-color: #7672726a; /* Light grey background */
+        padding: 20px;
+        max-width: 800px;
+        max-height: 80%;
+        width: 90%;
+        overflow-y: auto;
+        border-radius: 8px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+    }
+
+#info-modal h2 {
+    font-size: 2rem;
+}
+
+#info-modal p {
+    font-size: 1rem;
+}
+
+
+footer.citation {
+    font-size: 0.9em;
+    color:  white;
+    text-align: center;
+    margin-top: 20px;
+}
+
+footer.citation strong {
+    font-weight: bold;
+}
+
+#info-modal .modal-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+}
+
+#info-modal .close-btn {
+    background-color: #041324;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    align-self: flex-end; /* Aligns the button to the right */
+}
+
+#info-modal .close-btn:hover {
+    background-color: #22262b;
+}
+
+#info-modal.active {
+    visibility: visible;
+    opacity: 1;
+}
+
+/* Text color based on Rasa */
+.sringara {
+    color: rgb(108, 225, 108); /* Green for Love */
+}
+
+.raudra {
+    color: red; /* Red for Anger */
+}
+
+.veera {
+    color: rgb(211, 158, 60); /* Orange for Courage */
+}
+
+.hasya {
+    color: rgb(239, 227, 227); /* White for Satire */
+}
+
+.karuna {
+    color: grey; /* Grey for Pathos */
+}
+
+.vibhasta {
+    color: rgb(15, 15, 108); /* Blue for Disgust */
+}
+
+.adbuta {
+    color: rgb(225, 225, 121); /* Yellow for Wonderment */
+}
+
+.bhayanaka {
+    color: black; /* Black for Fear */
+}
+
+.shanta {
+    color: white; /* White for Serenity */
+}
+
+/* Interact and Pause Buttons */
+#interact-pause-container {
+    position: fixed;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+}
+
+#interact-pause-container button {
+    margin: 10px;
+    padding: 12px 24px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    border: none;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: white;
+    border-radius: 4px;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+#interact-pause-container button:hover {
+    background-color: rgba(255, 255, 255, 0.4);
+    transform: scale(1.1);
+}
