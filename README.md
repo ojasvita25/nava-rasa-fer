@@ -63,5 +63,6 @@ python -m flask --app ./app.py run
 ### 🔗 Resources
 
 - GitHub: [https://github.com/sb-ai-lab/EmotiEffLib](https://github.com/sb-ai-lab/EmotiEffLib)
+- Paper : [https://proceedings.mlr.press/v202/savchenko23a/savchenko23a.pdf](https://proceedings.mlr.press/v202/savchenko23a/savchenko23a.pdf)
 
 > Credit to SB-AI-Lab for open-sourcing this powerful model!
